@@ -7,7 +7,7 @@
 
 //: Say we have a variable we're going to use to keep track of how fast we're going.
 
-var kph: Double = 0.0
+var kph: Double = 88
 
 //: Now we want to print out a description of how fast we're going:
 
@@ -41,6 +41,18 @@ if someThing > otherThing {
 //: Now see if you can make an `if`/`else` statement that prints out a description of how fast we're moving. I.e. "We're standing still" or "We're moving 88.0 km/h".
 kph
 
+if kph > 0 {
+    
+    print ("We are going \(kph) kp/h ") }
+
+else { print ("We are standing still")
+    
+    
+}
+
+    
+
+
 
 
 
@@ -49,6 +61,17 @@ kph
 //:
 //: It turns out in this Playground the speed limit is 30km/h. So add a case where if the `kph` variable contains a value greater than 30.0 you should print out "Whoa slow down buddy, 35.9 km/h is too fast for this school zone!".
 //: You'll need to use an `if`, an `else if` and an `else` for this, because we have to handle three cases (not moving, moving under speed limit, and moving over speed limit).
+
+
+if kph > 30.0 {
+    print ("Whoa slow down buddy, \(kph) km/h is too fast for this school zone!")
+    } else if kph > 0 {
+        print ("You're under the speed limit, nice job") }
+    
+    else { print ("We are standing still")
+    
+}
+        
 
 
 

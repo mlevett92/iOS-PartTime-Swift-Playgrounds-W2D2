@@ -48,22 +48,39 @@ box1.area()
 //: Using the Box class as an example, create a new class called Bicycle. Bicycles should have two `Int` properties, `numberOfGears` and `currentGear` (give them sensible default values).
 //:
 //: Bicycles should also have two functions. `gearUp()` and `gearDown()`, which increase and decrease the value in `currentGear`.
-
+class Bicycle {
+    
+    var numberOfGears: Int = 0
+    var currentGear: Int = 0
+    
+    func gearUp() {
+        currentGear = currentGear + 1
+        
+    }
+    
+    func gearDown () {
+        currentGear = currentGear - 1
+        
+    }
+    
+    
+    
+}
 
 
 
 
 //: Test your bicycle out by uncommenting the following code:
  
-//var myBike = Bicycle()
+var myBike = Bicycle()
 //
-//myBike.numberOfGears = 16 // upgrade!
-//myBike.gearUp()
-//myBike.gearUp()
-//myBike.gearDown()
-//myBike.gearUp()
+myBike.numberOfGears = 16 // upgrade!
+myBike.gearUp()
+myBike.gearUp()
+myBike.gearDown()
+myBike.gearUp()
 //
-//print("my bike is in the \(myBike.currentGear)rd gear")
+print("my bike is in the \(myBike.currentGear)rd gear")
 
 
 //: ## Challenge 2
@@ -107,12 +124,41 @@ brightBulb.watts
 //:
 //: Hint: don't forget to supply a number of gears when you create your bicycles!
 
+class Bicycle1 {
+    
+    let numberOfGears : Int
+    var currentGear : Int = 0
+    
+    func gearUp() {
+        currentGear = currentGear + 1
+        
+    }
+    
+    func gearDown () {
+        currentGear = currentGear - 1
+        
+    }
+    
+    init (gears: Int) {
+        numberOfGears = gears }
+    
+    
+}
 
+var singlespeed = Bicycle1(gears:5)
+var doublespeed = Bicycle1(gears:10)
 
+singlespeed.numberOfGears
+doublespeed.numberOfGears
 
+var singleSpeed = Bicycle1(gears:10)
+//
 
-
-
+singleSpeed.gearUp()
+singleSpeed.gearUp()
+singleSpeed.gearUp()
+//
+print("my bike is in the \(singleSpeed.currentGear)rd gear")
 
 
 
@@ -126,8 +172,23 @@ brightBulb.watts
 //: The syntax for subclassing can be found in the Swift Cheat Sheet included with this Playground.
 //:
 //: Hint: height * width * depth = the area of a cube
+class Cube: Box {
+    
+    var depth: Double = 0
+    
+    override func area() -> Double {
+       return  width*depth*height
+    }
+    
+    
+}
 
+let myCube = Cube()
+myCube.depth = 3
+myCube.width = 3
+myCube.height = 3
 
+myCube.area ()
 
 
 //: DONE!!! - Head back to compass to do today's tutorial.
